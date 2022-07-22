@@ -21,7 +21,16 @@ int Enemy::Update()
 	TransInfo.Position.x -= 2;
 
 	if (TransInfo.Position.x <= 23)
-		TransInfo.Position.x = 23;
+	{
+		srand(29);
+		TransInfo.Position.x = 119;
+		TransInfo.Position.x -= 2;
+		for (int i = 0; i < 30; ++i)
+		{
+			if (TransInfo.Position.x <= 23)
+				TransInfo.Position.y = rand() % i;
+		}
+	}
 
 	return 0;
 }

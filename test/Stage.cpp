@@ -23,9 +23,9 @@ void Stage::Initialize()
 	pUI2 = new ScoreBoard;
 	pUI2->Initialize();
 
-	for (int i = 0; i < 5; ++i)
+	for (int i = 0; i < 3; ++i)
 	{
-		for (int j = 0; j < 5; ++j)
+		for (int j = 0; j < 3; ++j)
 		{
 			Object* pEnemy = pEnemyProto->Clone();
 			srand(DWORD(GetTickCount64() * (i + 1)));
@@ -37,7 +37,6 @@ void Stage::Initialize()
 
 void Stage::Update()
 {
-
 	Enable_UI();
 
 	ObjectManager::GetInstance()->Update();
@@ -58,8 +57,6 @@ void Stage::Update()
 					pUI2 = new ScoreBoard;
 
 					SceneManager::GetInstance()->SetScene(SCENEID::READY);
-
-					CursorManager::GetInstance()->ClearBuffer();
 				}
 			}
 		}
