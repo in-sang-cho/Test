@@ -21,6 +21,7 @@ private:
 
 public:
 	void AddObject(Object* _Object);
+	void DelObject();
 	list<Object*>* GetObjectList(string _strKey);
 	void Update();
 	void Render();

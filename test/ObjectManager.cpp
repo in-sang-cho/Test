@@ -29,6 +29,19 @@ void ObjectManager::AddObject(Object* _Object)
 		iter->second.push_back(_Object);
 }
 
+void ObjectManager::DelObject()
+{
+	map<string, list<Object*>>::iterator iter = EnableList->find(_Object->GetKey());
+
+	if (iter == EnableList->end())
+	{
+		list<Object*> TempList;
+		TempList.pop_back();
+	}
+	else
+		iter->second.pop_back();
+}
+
 list<Object*>* ObjectManager::GetObjectList(string _strKey)
 {
 	map<string, list<Object*>>::iterator iter = EnableList->find(_strKey);

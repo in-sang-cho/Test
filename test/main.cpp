@@ -8,7 +8,7 @@ int main()
 	system("mode con cols=120 lines=30");
 
 	MainUpdate Main;
-	Main.Initialize();
+	Main.Initialize();	// 초기화(부르고 나면 끝)
 
 	ULONGLONG Time = GetTickCount64();
 
@@ -20,8 +20,8 @@ int main()
 
 			system("cls");
 
-			Main.Update();
-			Main.Render();
+			Main.Update();	//갱신
+			Main.Render();	//그리기
 		}
 	}
 

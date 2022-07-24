@@ -33,6 +33,7 @@ void Stage::Initialize()
 			ObjectManager::GetInstance()->AddObject(pEnemy);
 		}
 	}
+
 }
 
 void Stage::Update()
@@ -55,9 +56,9 @@ void Stage::Update()
 				{
 					pUI1 = new MainBoard;
 					pUI2 = new ScoreBoard;
-
 					SceneManager::GetInstance()->SetScene(SCENEID::READY);
 				}
+
 			}
 		}
 	}
