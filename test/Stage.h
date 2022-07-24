@@ -5,10 +5,12 @@ class Object;
 class UserInterface;
 class Stage : public Scene
 {
-public:
+private:
 	UserInterface* pUI1;
 	UserInterface* pUI2;
 	int Check;
+
+	Object* pPlayer;
 public:
 	virtual void Initialize()override;
 	virtual void Update()override;

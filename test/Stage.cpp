@@ -23,6 +23,9 @@ void Stage::Initialize()
 	pUI2 = new ScoreBoard;
 	pUI2->Initialize();
 
+	pPlayer = ObjectManager::GetInstance()->GetObjectList("Player")->front()->Clone();
+	pPlayer->Initialize();
+
 	for (int i = 0; i < 3; ++i)
 	{
 		for (int j = 0; j < 3; ++j)
@@ -41,8 +44,6 @@ void Stage::Update()
 	Enable_UI();
 
 	ObjectManager::GetInstance()->Update();
-
-	Object* pPlayer = ObjectManager::GetInstance()->GetObjectList("Player")->front();
 	list<Object*>* pEnemyList = ObjectManager::GetInstance()->GetObjectList("Enemy");
 
 	if (pPlayer != nullptr)

@@ -21,7 +21,7 @@ private:
 
 public:
 	void AddObject(Object* _Object);
-	void DelObject();
+	void DelObject(Object* _Object, list<Object*>::iterator _Where);
 	list<Object*>* GetObjectList(string _strKey);
 	void Update();
 	void Render();

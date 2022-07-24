@@ -29,14 +29,13 @@ void ObjectManager::AddObject(Object* _Object)
 		iter->second.push_back(_Object);
 }
 
-void ObjectManager::DelObject()
+void ObjectManager::DelObject(Object* _Object, list<Object*>::iterator _Where)
 {
 	map<string, list<Object*>>::iterator iter = EnableList->find(_Object->GetKey());
 
 	if (iter == EnableList->end())
 	{
-		list<Object*> TempList;
-		TempList.pop_back();
+		return _Object;
 	}
 	else
 		iter->second.pop_back();
