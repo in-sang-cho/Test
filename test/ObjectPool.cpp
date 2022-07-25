@@ -35,12 +35,6 @@ void ObjectPool::Update()
 
 				(*iter).second.erase(iter2);
 			}
-
-			case 2:
-				CursorManager::GetInstance()->WriteBuffer(50.0f, 1.0f, (char*)"충돌입니다");
-				++iter2;
-				break;
-
 			default:
 				++iter2;
 			}

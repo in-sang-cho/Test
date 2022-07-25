@@ -17,7 +17,7 @@ ObjectManager::~ObjectManager()
 
 void ObjectManager::AddObject(Object* _Object)
 {
-	map<string, list<Object*>>::iterator iter = EnableList->find(_Object->GetKey());
+	map<string, list<Object*>>::iterator iter = EnableList->find(_Object->GetKey());	//위치값이나 함수
 
 	if (iter == EnableList->end())
 	{
