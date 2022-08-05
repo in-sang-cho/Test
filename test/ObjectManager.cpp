@@ -35,7 +35,7 @@ void ObjectManager::DelObject(Object* _Object, list<Object*>::iterator _Where)
 
 	if (iter == EnableList->end())
 	{
-		
+		ObjectPool::GetEnableList
 		
 	}
 	else
