@@ -23,6 +23,7 @@ private:
 public:
 	static map<string, list<Object*>>* GetEnableList() { return &EnableList; }
 	void Update();
+	void Update();
 
 private:
 	ObjectPool();
